@@ -1,0 +1,7 @@
+{
+  "extends": "@detra-lab/tsc/node/tsconfig.cjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true
+  }
+}
