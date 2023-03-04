@@ -1,0 +1,6 @@
+{
+  "extends": ["./index", "./typescript"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
+}
