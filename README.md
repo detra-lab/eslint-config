@@ -1,5 +1,9 @@
 # ESLint Config
 
+[![NPM Version][npm_version_badge]][npm_badge_url]
+[![NPM Downloads][npm_downloads_badge]][npm_badge_url]
+[![CI Status][ci_badge]][npm_badge_url]
+
 [ESLint](https://eslint.org) config for JavaScript, TypeScript, and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
@@ -19,14 +23,7 @@
 1. Install the dependencies:
 
    ```sh
-   # NPM
    npm add --save-dev @detra-lab/eslint-config eslint
-
-   # PNPM
-   pnpm add --save-dev @detra-lab/eslint-config eslint
-
-   # Yarn
-   yarn add --dev @detra-lab/eslint-config eslint
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -50,16 +47,10 @@
 4. Lint your code with ESLint:
 
    ```sh
-   # NPM
    npm run check:src
-
-   # PNPM
-   pnpm run check:src
-
-   # Yarn
-   yarn check:src
    ```
-</details>
+
+   </details>
 
 <details>
 <summary><strong>TypeScript</strong></summary>
@@ -67,14 +58,7 @@
 1. Install the dependencies:
 
    ```sh
-   # NPM
    npm add --save-dev @detra-lab/eslint-config eslint typescript
-
-   # PNPM
-   pnpm add --save-dev @detra-lab/eslint-config eslint typescript
-
-   # Yarn
-   yarn add --dev @detra-lab/eslint-config eslint typescript
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -104,16 +88,10 @@
 4. Lint your code with ESLint:
 
    ```sh
-   # NPM
    npm run check:src
-
-   # PNPM
-   pnpm run check:src
-
-   # Yarn
-   yarn check:src
    ```
-</details>
+
+   </details>
 
 <details>
 <summary><strong>JavaScript + React</strong></summary>
@@ -121,14 +99,7 @@
 1. Install the dependencies:
 
    ```sh
-   # NPM
    npm add --save-dev @detra-lab/eslint-config eslint react react-dom
-
-   # PNPM
-   pnpm add --save-dev @detra-lab/eslint-config eslint react react-dom
-
-   # Yarn
-   yarn add --dev @detra-lab/eslint-config eslint react react-dom
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -152,16 +123,10 @@
 4. Lint your code with ESLint:
 
    ```sh
-   # NPM
    npm run check:src
-
-   # PNPM
-   pnpm run check:src
-
-   # Yarn
-   yarn check:src
    ```
-</details>
+
+   </details>
 
 <details>
 <summary><strong>TypeScript + React</strong></summary>
@@ -169,14 +134,7 @@
 1. Install the dependencies:
 
    ```sh
-   # NPM
    npm add --save-dev @detra-lab/eslint-config eslint typescript react react-dom
-
-   # PNPM
-   pnpm add --save-dev @detra-lab/eslint-config eslint typescript react react-dom
-
-   # Yarn
-   yarn add --dev @detra-lab/eslint-config eslint typescript react react-dom
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -207,16 +165,10 @@
 4. Lint your code with ESLint:
 
    ```sh
-   # NPM
    npm run check:src
-
-   # PNPM
-   pnpm run check:src
-
-   # Yarn
-   yarn check:src
    ```
-</details>
+
+   </details>
 
 ## Extending the Configuration
 
@@ -265,7 +217,7 @@ You can extend the configuration and override some rules. Add the `rules` proper
    },
    "eslint.validate": ["javascript"] // Add the types of files you want to validate (e.g. "typescript", "javascriptreact", "typescriptreact"])
    ```
-</details>
+   </details>
 
 ## Thanks
 
@@ -279,3 +231,14 @@ You can extend the configuration and override some rules. Add the `rules` proper
 ## License
 
 [MIT License](./LICENSE)
+
+<!-- Badges -->
+
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/tests.yml?style=flat-square&colorA=6930C3&colorB=5390D9
+[npm_version_badge]: https://img.shields.io/npm/v/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
+[npm_downloads_badge]: https://img.shields.io/npm/dm/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
+
+<!-- Links -->
+
+[ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/tests.yml
+[npm_badge_url]: https://www.npmjs.com/package/@detra-lab/eslint-config
