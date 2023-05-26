@@ -13,7 +13,6 @@ const TYPESCRIPT_RULES = {
   'no-new-symbol': STATUS.None,
   'no-obj-calls': STATUS.None,
   'no-redeclare': STATUS.None,
-  'no-restricted-exports': [STATUS.Warn, { "restrictDefaultExports": { "direct": true } }],
   'no-setter-return': STATUS.None,
   'no-this-before-super': STATUS.None,
   'no-undef': STATUS.None,
