@@ -97,6 +97,7 @@ const JAVASCRIPT_RULES = {
   'no-prototype-builtins': STATUS.Error,
   'no-redeclare': STATUS.Error,
   'no-regex-spaces': STATUS.Error,
+  'no-restricted-exports': [STATUS.Warn, { "restrictDefaultExports": { "direct": true } }],
   'no-return-assign': [STATUS.Error, 'always'],
   'no-script-url': STATUS.Error,
   'no-self-assign': STATUS.Error,
