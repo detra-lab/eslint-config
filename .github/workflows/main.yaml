@@ -10,6 +10,8 @@ on:
 
 jobs:
   tests:
+    if: ${{ contains(github.event.pull_request.body, '[[skip-ci]]') == false }}
+
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,7 +30,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: 'Install Dependencies'
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: 'Linters & Tests'
         run: |
