@@ -23,7 +23,7 @@
 1. Install the dependencies:
 
    ```sh
-   npm add --save-dev @detra-lab/eslint-config eslint
+   pnpm add -D @detra-lab/eslint-config eslint
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -47,7 +47,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   npm run check:src
+   pnpm check:src
    ```
 
    </details>
@@ -58,7 +58,7 @@
 1. Install the dependencies:
 
    ```sh
-   npm add --save-dev @detra-lab/eslint-config eslint typescript
+   pnpm add -D @detra-lab/eslint-config eslint typescript
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -88,7 +88,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   npm run check:src
+   pnpm check:src
    ```
 
    </details>
@@ -99,7 +99,7 @@
 1. Install the dependencies:
 
    ```sh
-   npm add --save-dev @detra-lab/eslint-config eslint react react-dom
+   pnpm add -D @detra-lab/eslint-config eslint react react-dom
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -123,7 +123,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   npm run check:src
+   pnpm check:src
    ```
 
    </details>
@@ -134,7 +134,7 @@
 1. Install the dependencies:
 
    ```sh
-   npm add --save-dev @detra-lab/eslint-config eslint typescript react react-dom
+   pnpm add -D @detra-lab/eslint-config eslint typescript react react-dom
    ```
 
 2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
@@ -165,7 +165,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   npm run check:src
+   pnpm check:src
    ```
 
    </details>

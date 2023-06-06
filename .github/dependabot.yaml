@@ -2,7 +2,7 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
-    labels: ['update: packages 📦']
+    labels: ['scope :: chore :gear:', 'status :: needs review :mag:']
     schedule:
       interval: 'monthly'
       time: '08:00'
