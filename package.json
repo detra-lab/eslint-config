@@ -23,12 +23,11 @@
     "access": "public"
   },
   "main": "index.js",
-  "types": "types/index.d.ts",
+  "types": "index.d.ts",
   "files": [
-    "/index.js",
-    "/typescript.js",
-    "/react.js",
-    "/types/"
+    "/index.{js,d.ts}",
+    "/react.{js,d.ts}",
+    "/typescript.{js,d.ts}"
   ],
   "prettier": "@detra-lab/prettier-config",
   "scripts": {
@@ -38,7 +37,7 @@
     "test:js": "eslint ./tests/. -c ./tests/.eslintrc.es.js --ext .js,.jsx",
     "test:ts": "eslint ./tests/. -c ./tests/.eslintrc.ts.js --ext .ts,.tsx",
     "test": "pnpm run build && pnpm run /^test:.*/",
-    "build": "tsup",
+    "build": "tsup-node",
     "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {

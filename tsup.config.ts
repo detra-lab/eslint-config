@@ -1,13 +1,19 @@
 import { defineConfig } from 'tsup'
 
+const ENTRIES = {
+  index: './src/javascript.ts',
+  react: './src/react.ts',
+  typescript: './src/typescript.ts'
+}
+
 export default defineConfig({
-  entry: {
-    index: './src/javascript.ts',
-    react: './src/react.ts',
-    typescript: './src/typescript.ts'
-  },
-  clean: true,
+  clean: false,
+  dts: true,
+  entry: ENTRIES,
   format: ['cjs'],
+  outDir: '.',
+  platform: 'node',
   sourcemap: false,
-  splitting: false
+  splitting: false,
+  target: 'node16'
 })

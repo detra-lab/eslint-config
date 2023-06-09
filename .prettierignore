@@ -1,6 +1,5 @@
-/index.js
-/typescript.js
-/react.js
-/types/
+/index.*
+/react.*
+/typescript.*
 
 node_modules

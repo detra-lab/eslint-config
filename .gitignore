@@ -1,7 +1,6 @@
-/index.js
-/typescript.js
-/react.js
-/types/
+/index.*
+/react.*
+/typescript.*
 
 .cache
 .DS_Store
