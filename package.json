@@ -26,10 +26,8 @@
   "types": "types/index.d.ts",
   "files": [
     "/index.js",
-    "/javascript.js",
     "/typescript.js",
     "/react.js",
-    "/constants.js",
     "/types/"
   ],
   "prettier": "@detra-lab/prettier-config",

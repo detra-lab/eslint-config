@@ -1,13 +1,13 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: [
-    './src/index.ts',
-    './src/javascript.ts',
-    './src/react.ts',
-    './src/typescript.ts'
-  ],
-  splitting: false,
+  entry: {
+    index: './src/javascript.ts',
+    react: './src/react.ts',
+    typescript: './src/typescript.ts'
+  },
+  clean: true,
+  format: ['cjs'],
   sourcemap: false,
-  clean: true
+  splitting: false
 })
