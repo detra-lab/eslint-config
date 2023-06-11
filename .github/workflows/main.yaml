@@ -16,9 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version:
-          - 16.x
-          - 18.x
+        node-version: [16, 18]
 
     steps:
       - uses: actions/checkout@v3
@@ -28,14 +26,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-      - name: 'Install Dependencies'
+      - name: Install Dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: 'Linters & Tests'
+      - name: Linters & Tests
         run: |
-          pnpm check
-          pnpm test
+          pnpm run check
+          pnpm run test
 
-      - name: 'Build the artifact'
-        run: pnpm build
+      - name: Build the artifact
+        run: pnpm run build
