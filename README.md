@@ -47,7 +47,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   pnpm check:src
+   pnpm run check:src
    ```
 
    </details>
@@ -88,7 +88,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   pnpm check:src
+   pnpm run check:src
    ```
 
    </details>
@@ -123,7 +123,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   pnpm check:src
+   pnpm run check:src
    ```
 
    </details>
@@ -165,7 +165,7 @@
 4. Lint your code with ESLint:
 
    ```sh
-   pnpm check:src
+   pnpm run check:src
    ```
 
    </details>

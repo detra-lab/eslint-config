@@ -46,7 +46,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm release
+          publish: pnpm run release
           title: 'chore: Bump to v${{ steps.pkg_version.outputs.version }}'
           commit: 'chore: Bump to v${{ steps.pkg_version.outputs.version }}'
         env:

@@ -34,8 +34,8 @@ jobs:
 
       - name: 'Linters & Tests'
         run: |
-          pnpm check
-          pnpm test
+          pnpm run check
+          pnpm run test
 
       - name: 'Build the artifact'
-        run: pnpm build
+        run: pnpm run build
