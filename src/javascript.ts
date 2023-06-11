@@ -215,11 +215,9 @@ const JAVASCRIPT_RULES = {
   'jsdoc/implements-on-classes': STATUS.Warn,
   'jsdoc/informative-docs': STATUS.None,
   'jsdoc/match-description': STATUS.None,
-  'jsdoc/match-name': STATUS.None,
   'jsdoc/multiline-blocks': STATUS.Warn,
   'jsdoc/no-bad-blocks': STATUS.None,
   'jsdoc/no-blank-block-descriptions': STATUS.None,
-  'jsdoc/no-blank-blocks': STATUS.None,
   'jsdoc/no-defaults': STATUS.None,
   'jsdoc/no-missing-syntax': STATUS.None,
   'jsdoc/no-multi-asterisks': STATUS.Warn,
@@ -250,7 +248,6 @@ const JAVASCRIPT_RULES = {
   'jsdoc/require-yields-check': STATUS.Warn,
   'jsdoc/sort-tags': STATUS.None,
   'jsdoc/tag-lines': STATUS.Warn,
-  'jsdoc/text-escaping': STATUS.None,
   'jsdoc/valid-types': STATUS.Warn,
 
   // --- Node
