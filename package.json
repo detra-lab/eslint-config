@@ -1,6 +1,6 @@
 {
   "name": "@detra-lab/eslint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ESLint config for JavaScript, TypeScript, and React. Modular and opinionated.",
   "license": "MIT",
   "author": {
