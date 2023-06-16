@@ -45,7 +45,6 @@ jobs:
           title: 'chore: Bump the package version'
           commit: 'chore: Bump the package version'
           publish: pnpm run release
-          setupGitUser: false
         env:
           NPM_TOKEN: ${{ secrets.DETRA_NPM_PAT }}
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_TOKEN }}
