@@ -36,7 +36,7 @@ jobs:
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
           EOF
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.DETRA_NPM_PAT }}
 
       - name: Create Release PR or Publish to NPM
         id: changesets
@@ -45,7 +45,6 @@ jobs:
           title: 'chore: Bump the package version'
           commit: 'chore: Bump the package version'
           publish: pnpm run release
-          setupGitUser: false
         env:
           NPM_TOKEN: ${{ secrets.DETRA_NPM_PAT }}
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_TOKEN }}
