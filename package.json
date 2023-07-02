@@ -2,32 +2,27 @@
   "name": "@detra-lab/eslint-config",
   "version": "0.2.0",
   "description": "ESLint config for JavaScript, TypeScript, and React. Modular and opinionated.",
-  "license": "MIT",
-  "author": {
-    "name": "Detra",
-    "email": "detra.lab@pm.me",
-    "homepage": "https://github.com/detra-lab"
+  "type": "commonjs",
+  "main": "./javascript.js",
+  "types": "./javascript.d.ts",
+  "exports": {
+    ".": {
+      "import": "./javascript.js",
+      "types": "./javascript.d.ts"
+    },
+    "./typescript": {
+      "import": "./typescript.js",
+      "types": "./typescript.d.ts"
+    },
+    "./react": {
+      "import": "./react.js",
+      "types": "./react.d.ts"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/detra-lab/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/detra-lab/eslint-config/issues"
-  },
-  "engines": {
-    "node": "16.x || 18.x",
-    "pnpm": ">=8"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "index.js",
-  "types": "index.d.ts",
   "files": [
-    "/index.{js,d.ts}",
-    "/react.{js,d.ts}",
-    "/typescript.{js,d.ts}"
+    "./javascript.{js,d.ts}",
+    "./typescript.{js,d.ts}",
+    "./react.{js,d.ts}"
   ],
   "prettier": "@detra-lab/prettier-config",
   "scripts": {
@@ -42,15 +37,15 @@
   },
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
-    "@changesets/cli": "^2.26.1",
+    "@changesets/cli": "^2.26.2",
     "@detra-lab/prettier-config": "^0.1.0",
-    "@detra-lab/tsc": "^0.2.0",
-    "@evilmartians/lefthook": "^1.4.1",
-    "@types/node": "^16.0.0",
-    "eslint": "^8.42.0",
+    "@detra-lab/tsc": "^0.2.5",
+    "@evilmartians/lefthook": "^1.4.3",
+    "@types/node": "^16.18.38",
+    "eslint": "^8.44.0",
     "prettier": "^2.8.8",
-    "tsup": "^7.0.0",
-    "typescript": "^5.0.0"
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@babel/core": "7.22.5",
@@ -58,20 +53,40 @@
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "46.2.6",
+    "eslint-plugin-jsdoc": "46.4.3",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0",
-    "typescript": "^5.0.0"
+    "eslint": ">=8.0",
+    "typescript": ">=5.0"
   },
   "peerDependenciesMeta": {
     "typescript": {
       "optional": true
     }
+  },
+  "engines": {
+    "node": "16 || 18",
+    "pnpm": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Detra",
+    "email": "detra.lab@pm.me",
+    "homepage": "https://github.com/detra-lab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/detra-lab/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/detra-lab/eslint-config/issues"
   },
   "keywords": [
     "linter",

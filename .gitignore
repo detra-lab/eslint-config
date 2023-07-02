@@ -1,6 +1,6 @@
-/index.*
-/react.*
+/javascript.*
 /typescript.*
+/react.*
 
 .cache
 .DS_Store

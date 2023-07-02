@@ -1,5 +1,6 @@
-/index.*
-/react.*
+/javascript.*
 /typescript.*
+/react.*
 
 node_modules
+pnpm-lock.yaml
