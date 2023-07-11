@@ -112,6 +112,27 @@
       ```
     </details>
 
+    <details>
+      <summary><strong>TypeScript + fp-ts + React</strong></summary>
+
+      ```jsonc
+      {
+        "root": true,
+        "extends": [
+          "@detra-lab/eslint-config",
+          "@detra-lab/eslint-config/typescript",
+          "@detra-lab/eslint-config/fp-ts"
+          "@detra-lab/eslint-config/react"
+        ],
+        "parserOptions": {
+          // Change it to match your `tsconfig.json` location.
+          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          "project": ["./tsconfig.json"]
+        }
+      }
+      ```
+    </details>
+
 3. Use the ESLint CLI to check supported files. Drop this line into your `package.json`, under the `scripts` property:
 
    ```diff
