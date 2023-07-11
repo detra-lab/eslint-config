@@ -18,9 +18,10 @@
 
 ## Why our configuration?
 
-- We strive to provide the latest configuration updates for the ESLint ecosystem.
-- Our configuration is highly modular, supporting various syntaxes besides modern JavaScript, such as TypeScript, fp-ts, and React.
-- Formatting rules are not included as they are delegated to Prettier.
+- Designed to provide the latest updates from the ESLint ecosystem.
+- Modular: it supports a variety of syntaxes beyond modern JavaScript, including TypeScript, fp-ts, and React.
+- We do not include formatting rules, as Prettier manages these.
+- We think you'll appreciate our rules for improving your code's quality.
 
 ## How to install and use
 
@@ -44,74 +45,71 @@
     <details>
       <summary><strong>TypeScript</strong></summary>
 
-   ```jsonc
-   {
-     "root": true,
-     "extends": [
-       "@detra-lab/eslint-config",
-       "@detra-lab/eslint-config/typescript"
-     ],
-     "parserOptions": {
-       // Change it to match your `tsconfig.json` location.
-       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
-       "project": ["./tsconfig.json"]
-     }
-   }
-   ```
-
+      ```jsonc
+      {
+        "root": true,
+        "extends": [
+          "@detra-lab/eslint-config",
+          "@detra-lab/eslint-config/typescript"
+        ],
+        "parserOptions": {
+          // Change it to match your `tsconfig.json` location.
+          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          "project": ["./tsconfig.json"]
+        }
+      }
+      ```
     </details>
 
     <details>
       <summary><strong>TypeScript + fp-ts</strong></summary>
 
-   ```jsonc
-   {
-     "root": true,
-     "extends": [
-       "@detra-lab/eslint-config",
-       "@detra-lab/eslint-config/typescript"
-     ],
-     "parserOptions": {
-       // Change it to match your `tsconfig.json` location.
-       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
-       "project": ["./tsconfig.json"]
-     }
-   }
-   ```
-
+      ```jsonc
+      {
+        "root": true,
+        "extends": [
+          "@detra-lab/eslint-config",
+          "@detra-lab/eslint-config/typescript",
+          "@detra-lab/eslint-config/fp-ts"
+        ],
+        "parserOptions": {
+          // Change it to match your `tsconfig.json` location.
+          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          "project": ["./tsconfig.json"]
+        }
+      }
+      ```
     </details>
 
     <details>
       <summary><strong>JavaScript + React</strong></summary>
 
-   ```json
-   {
-     "root": true,
-     "extends": ["@detra-lab/eslint-config", "@detra-lab/eslint-config/react"]
-   }
-   ```
-
+      ```json
+      {
+        "root": true,
+        "extends": ["@detra-lab/eslint-config", "@detra-lab/eslint-config/react"]
+      }
+      ```
     </details>
 
     <details>
       <summary><strong>TypeScript + React</strong></summary>
 
-   ```jsonc
-   {
-     "root": true,
-     "extends": [
-       "@detra-lab/eslint-config",
-       "@detra-lab/eslint-config/typescript"
-       "@detra-lab/eslint-config/react"
-     ],
-     "parserOptions": {
-       // Change it to match your `tsconfig.json` location.
-       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
-       "project": ["./tsconfig.json"]
-     }
-   }
-   ```
-
+      ```jsonc
+      {
+        "root": true,
+        "extends": [
+          "@detra-lab/eslint-config",
+          "@detra-lab/eslint-config/typescript"
+          "@detra-lab/eslint-config/react"
+        ],
+        "parserOptions": {
+          // Change it to match your `tsconfig.json` location.
+          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          "project": ["./tsconfig.json"]
+        }
+      }
+      ```
     </details>
 
 3. Use the ESLint CLI to check supported files. Drop this line into your `package.json`, under the `scripts` property:
@@ -188,7 +186,7 @@ You can extend the configuration and override some rules. Add the `rules` proper
    },
    "eslint.validate": ["javascript"] // Add the types of files you want to validate (e.g. "typescript", "javascriptreact", "typescriptreact"])
    ```
-   </details>
+</details>
 
 ## Thanks
 

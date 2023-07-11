@@ -260,11 +260,9 @@ const JAVASCRIPT_RULES = {
 }
 
 export = {
-  root: true,
-
   env: {
+    es2020: true,
     browser: true,
-    es2021: true,
     jest: true,
     node: true
   },

@@ -1,5 +1,6 @@
 /javascript.*
 /typescript.*
+/fp-ts.*
 /react.*
 
 .cache

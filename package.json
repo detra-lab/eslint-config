@@ -14,6 +14,10 @@
       "import": "./typescript.js",
       "types": "./typescript.d.ts"
     },
+    "./fp-ts": {
+      "import": "./fp-ts.js",
+      "types": "./fp-ts.d.ts"
+    },
     "./react": {
       "import": "./react.js",
       "types": "./react.d.ts"
@@ -22,6 +26,7 @@
   "files": [
     "./javascript.{js,d.ts}",
     "./typescript.{js,d.ts}",
+    "./fp-ts.{js,d.ts}",
     "./react.{js,d.ts}"
   ],
   "prettier": "@detra-lab/prettier-config",
@@ -38,20 +43,21 @@
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
     "@changesets/cli": "^2.26.2",
-    "@detra-lab/prettier-config": "^0.1.0",
+    "@detra-lab/prettier-config": "^0.2.0",
     "@detra-lab/tsc": "^0.2.5",
-    "@evilmartians/lefthook": "^1.4.3",
+    "@evilmartians/lefthook": "^1.4.4",
     "@types/node": "^16.18.38",
     "eslint": "^8.44.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@babel/core": "7.22.5",
-    "@babel/eslint-parser": "7.22.5",
-    "@typescript-eslint/eslint-plugin": "5.60.1",
-    "@typescript-eslint/parser": "5.60.1",
+    "@babel/core": "7.22.8",
+    "@babel/eslint-parser": "7.22.7",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "eslint-plugin-fp-ts": "0.3.2",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsdoc": "46.4.3",
     "eslint-plugin-jsx-a11y": "6.7.1",
@@ -61,9 +67,13 @@
   },
   "peerDependencies": {
     "eslint": ">=8.0",
+    "fp-ts": ">=2.0",
     "typescript": ">=5.0"
   },
   "peerDependenciesMeta": {
+    "fp-ts": {
+      "optional": true
+    },
     "typescript": {
       "optional": true
     }
