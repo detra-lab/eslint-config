@@ -4,37 +4,117 @@
 [![NPM Downloads][npm_downloads_badge]][npm_badge_url]
 [![CI Status][ci_badge]][ci_badge_url]
 
-[ESLint](https://eslint.org) config for JavaScript, TypeScript, and React. Modular and opinionated.
+[ESLint](https://eslint.org) configuration for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
-  - [Available Configurations](#available-configurations)
-  - [Extending the Configuration](#extending-the-configuration)
-  - [Integrating ESLint into the IDEs/Editors](#integrating-eslint-into-the-ideseditors)
+  - [Why our configuration?](#why-our-configuration)
+  - [How to install and use](#how-to-install-and-use)
+  - [How to extend the configuration](#how-to-extend-the-configuration)
+  - [Integration with IDEs/Editors](#integration-with-ideseditors)
   - [Thanks](#thanks)
   - [License](#license)
 
 > The following ESLint configurations do not include code formatting rules, which are therefore delegated to [Prettier](https://prettier.io/). Please, use the [`@detra-lab/prettier`](https://github.com/detra-lab/prettier-config) to handle this type of need.
 
-## Available Configurations
+## Why our configuration?
 
-<details>
-<summary><strong>Base config (JavaScript)</strong></summary>
+- We strive to provide the latest configuration updates for the ESLint ecosystem.
+- Our configuration is highly modular, supporting various syntaxes besides modern JavaScript, such as TypeScript, fp-ts, and React.
+- Formatting rules are not included as they are delegated to Prettier.
 
-1. Install the dependencies:
+## How to install and use
+
+1. Install the correct dependencies:
 
    ```sh
    pnpm add -D @detra-lab/eslint-config eslint
    ```
 
-2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
+2. Create a `.eslintrc.json` file in the root of your project. Extend it with the following configuration:
 
-   ```json
+   ```jsonc
    {
+     "root": true,
      "extends": "@detra-lab/eslint-config"
    }
    ```
 
-3. Use the ESLint CLI to check supported files. Drop this line into your `package.json` under the `scripts` property:
+   We have some pre-built configurations if you need to support multiple environments and syntaxes, such as TypeScript or React:
+
+    <details>
+      <summary><strong>TypeScript</strong></summary>
+
+   ```jsonc
+   {
+     "root": true,
+     "extends": [
+       "@detra-lab/eslint-config",
+       "@detra-lab/eslint-config/typescript"
+     ],
+     "parserOptions": {
+       // Change it to match your `tsconfig.json` location.
+       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+       "project": ["./tsconfig.json"]
+     }
+   }
+   ```
+
+    </details>
+
+    <details>
+      <summary><strong>TypeScript + fp-ts</strong></summary>
+
+   ```jsonc
+   {
+     "root": true,
+     "extends": [
+       "@detra-lab/eslint-config",
+       "@detra-lab/eslint-config/typescript"
+     ],
+     "parserOptions": {
+       // Change it to match your `tsconfig.json` location.
+       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+       "project": ["./tsconfig.json"]
+     }
+   }
+   ```
+
+    </details>
+
+    <details>
+      <summary><strong>JavaScript + React</strong></summary>
+
+   ```json
+   {
+     "root": true,
+     "extends": ["@detra-lab/eslint-config", "@detra-lab/eslint-config/react"]
+   }
+   ```
+
+    </details>
+
+    <details>
+      <summary><strong>TypeScript + React</strong></summary>
+
+   ```jsonc
+   {
+     "root": true,
+     "extends": [
+       "@detra-lab/eslint-config",
+       "@detra-lab/eslint-config/typescript"
+       "@detra-lab/eslint-config/react"
+     ],
+     "parserOptions": {
+       // Change it to match your `tsconfig.json` location.
+       // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+       "project": ["./tsconfig.json"]
+     }
+   }
+   ```
+
+    </details>
+
+3. Use the ESLint CLI to check supported files. Drop this line into your `package.json`, under the `scripts` property:
 
    ```diff
    {
@@ -44,120 +124,13 @@
    }
    ```
 
-4. Lint your code with ESLint:
-
-   ```sh
-   pnpm run check:src
-   ```
-
-   </details>
-
-<details>
-<summary><strong>TypeScript</strong></summary>
-
-1. Install the dependencies:
-
-   ```sh
-   pnpm add -D @detra-lab/eslint-config eslint typescript
-   ```
-
-2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
-
-   ```jsonc
-   {
-     "extends": [
-       "@detra-lab/eslint-config",
-       "@detra-lab/eslint-config/typescript"
-     ],
-     "parserOptions": {
-       "project": ["./tsconfig.json"] // If you need, change it to match your `tsconfig.json` location.
-     }
-   }
-   ```
-
-3. Use the ESLint CLI to check supported files. Drop this line into your `package.json` under the `scripts` property:
-
-   ```diff
-   {
-     "scripts": [
-   +   "check:src": "eslint . --ext .js,.ts --ignore-path .gitignore"
-     ]
-   }
-   ```
-
-4. Lint your code with ESLint:
-
-   ```sh
-   pnpm run check:src
-   ```
-
-   </details>
-
-<details>
-<summary><strong>JavaScript + React</strong></summary>
-
-1. Install the dependencies:
-
-   ```sh
-   pnpm add -D @detra-lab/eslint-config eslint react react-dom
-   ```
-
-2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
-
-   ```json
-   {
-     "extends": ["@detra-lab/eslint-config", "@detra-lab/eslint-config/react"]
-   }
-   ```
-
-3. Use the ESLint CLI to check supported files. Drop this line into your `package.json` under the `scripts` property:
-
-   ```diff
-   {
-     "scripts": [
-   +   "check:src": "eslint . --ext .js,.jsx --ignore-path .gitignore"
-     ]
-   }
-   ```
-
-4. Lint your code with ESLint:
-
-   ```sh
-   pnpm run check:src
-   ```
-
-   </details>
-
-<details>
-<summary><strong>TypeScript + React</strong></summary>
-
-1. Install the dependencies:
-
-   ```sh
-   pnpm add -D @detra-lab/eslint-config eslint typescript react react-dom
-   ```
-
-2. Create a `.eslintrc.json` file in the root of your project, and extend the following configuration from it:
-
-   ```jsonc
-   {
-     "extends": [
-       "@detra-lab/eslint-config",
-       "@detra-lab/eslint-config/typescript"
-       "@detra-lab/eslint-config/react"
-     ],
-     "parserOptions": {
-       "project": ["./tsconfig.json"] // If you need, change it to match your `tsconfig.json` location.
-     }
-   }
-   ```
-
-3. Use the ESLint CLI to check supported files. Drop this line into your `package.json` under the `scripts` property:
+   In order to support more than one extension, you will need to modify the script so that it matches the correct files:
 
    ```diff
    {
      "scripts": [
    +   "check:src": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore"
+
      ]
    }
    ```
@@ -168,9 +141,7 @@
    pnpm run check:src
    ```
 
-   </details>
-
-## Extending the Configuration
+## How to extend the configuration
 
 You can extend the configuration and override some rules. Add the `rules` property inside the `.eslintrc.json` file and then choose what to turn on or off.
 
@@ -193,17 +164,17 @@ You can extend the configuration and override some rules. Add the `rules` proper
     // jquery: true
   ],
   "globals": {
-    // Your global variables (setting to false means it's not allowed to be reassigned)
+    // Your global variables (setting to `false` means it's not allowed to be reassigned)
     //
     // myGlobal: false
   },
   "rules": {
-    // Customize your rules
+    // Standard rules customisation
   }
 }
 ```
 
-## Integrating ESLint into the IDEs/Editors
+## Integration with IDEs/Editors
 
 <details>
 <summary><strong>Visual Studio Code</strong></summary>
@@ -230,7 +201,7 @@ You can extend the configuration and override some rules. Add the `rules` proper
 
 ## License
 
-[MIT License](./LICENSE)
+[Apache License 2.0](./LICENSE)
 
 <!-- Badges -->
 
