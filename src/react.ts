@@ -1,7 +1,7 @@
 import { STATUS } from './constants'
 
 const REACT_RULES = {
-  // --- Recommended - Overrides
+  // --- Overriding React Recommended
   'react/display-name': STATUS.None,
   'react/jsx-key': [
     STATUS.Error,
@@ -37,7 +37,7 @@ const REACT_RULES = {
   'react/no-typos': STATUS.Error,
   'react/no-unsafe': [STATUS.Error, { checkAliases: true }],
   'react/no-unstable-nested-components': STATUS.Error,
-  'react/prefer-es6-class': [STATUS.Error, 'always'],
+  'react/prefer-es6-class': [STATUS.Warn, 'always'],
   'react/self-closing-comp': STATUS.Error,
   'react/sort-comp': STATUS.Error,
   'react/static-property-placement': STATUS.Error,
