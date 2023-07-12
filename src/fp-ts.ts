@@ -9,7 +9,13 @@ const FP_TS_RULES = {
 }
 
 export = {
-  extends: ['plugin:fp-ts/recommended'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx', '*.cts', '*.ctsx', '*.mts', '*.mtsx'],
 
-  rules: FP_TS_RULES
+      extends: ['plugin:fp-ts/recommended'],
+
+      rules: FP_TS_RULES
+    }
+  ]
 }

@@ -194,7 +194,7 @@ const TYPESCRIPT_RULES = {
 export = {
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      files: ['*.ts', '*.tsx', '*.cts', '*.ctsx', '*.mts', '*.mtsx'],
 
       parser: '@typescript-eslint/parser',
 
