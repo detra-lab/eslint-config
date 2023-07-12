@@ -4,34 +4,33 @@
 [![NPM Downloads][npm_downloads_badge]][npm_badge_url]
 [![CI Status][ci_badge]][ci_badge_url]
 
-[ESLint](https://eslint.org) configuration for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.
+[ESLint](https://eslint.org) configurations for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
-  - [Why our configuration?](#why-our-configuration)
-  - [How to install and use](#how-to-install-and-use)
-  - [How to extend the configuration](#how-to-extend-the-configuration)
+  - [Why Use Our Configuration?](#why-use-our-configuration)
+  - [Installation and Usage](#installation-and-usage)
+  - [Extending the Configuration](#extending-the-configuration)
   - [Integration with IDEs/Editors](#integration-with-ideseditors)
-  - [Thanks](#thanks)
+  - [Acknowledgments](#acknowledgments)
   - [License](#license)
 
-> The following ESLint configurations do not include code formatting rules, which are therefore delegated to [Prettier](https://prettier.io/). Please, use the [`@detra-lab/prettier`](https://github.com/detra-lab/prettier-config) to handle this type of need.
+> Please note that this ESLint configuration does not include code formatting rules, as those are handled by [Prettier](https://prettier.io/). To handle code formatting, you can use [`@detra-lab/prettier`](https://github.com/detra-lab/prettier-config).
 
-## Why our configuration?
+## Why Use Our Configuration?
 
-- Designed to provide the latest updates from the ESLint ecosystem.
-- Modular: it supports a variety of syntaxes beyond modern JavaScript, including TypeScript, fp-ts, and React.
-- We do not include formatting rules, as Prettier manages these.
-- We think you'll appreciate our rules for improving your code's quality.
+- **Up-to-date**: Our configurations are designed to incorporate the latest updates from the ESLint ecosystem.
+- **Modular**: We support a variety of syntaxes beyond modern JavaScript, including TypeScript, fp-ts, and React.
+- **Separation of Concerns**: We focus on linting rules and do not include formatting rules, as those are better handled by Prettier.
 
-## How to install and use
+## Installation and Usage
 
-1. Install the correct dependencies:
+1. Install the required dependencies:
 
    ```sh
    pnpm add -D @detra-lab/eslint-config eslint
    ```
 
-2. Create a `.eslintrc.json` file in the root of your project. Extend it with the following configuration:
+2. Create a `.eslintrc.json` file in the root of your project and extend it with our configuration:
 
    ```jsonc
    {
@@ -40,7 +39,7 @@
    }
    ```
 
-   We have some pre-built configurations if you need to support multiple environments and syntaxes, such as TypeScript or React:
+   If you need to support multiple environments and syntaxes, such as TypeScript or React, we provide pre-built configurations. You can extend them as shown below:
 
     <details>
       <summary><strong>TypeScript</strong></summary>
@@ -133,7 +132,7 @@
       ```
     </details>
 
-3. Use the ESLint CLI to check supported files. Drop this line into your `package.json`, under the `scripts` property:
+3. Use the ESLint CLI to check supported files. Add the following line to your `package.json` under the `scripts` property:
 
    ```diff
    {
@@ -143,7 +142,7 @@
    }
    ```
 
-   In order to support more than one extension, you will need to modify the script so that it matches the correct files:
+   To support multiple file extensions, modify the script to match the correct files:
 
    ```diff
    {
@@ -160,9 +159,9 @@
    pnpm run check:src
    ```
 
-## How to extend the configuration
+## Extending the Configuration
 
-You can extend the configuration and override some rules. Add the `rules` property inside the `.eslintrc.json` file and then choose what to turn on or off.
+Extend and override specific rules by adding them to the `rules` property in the `.eslintrc.json` file.
 
 ```jsonc
 {
@@ -200,7 +199,7 @@ You can extend the configuration and override some rules. Add the `rules` proper
 
 1. Install the [ESLint Plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
-2. Add the following code to your `.vscode/settings.json`:
+2. Add the following code to your `.vscode/settings.json` file:
    ```jsonc
    "editor.codeActionsOnSave": {
      "source.fixAll.eslint": true
@@ -209,14 +208,17 @@ You can extend the configuration and override some rules. Add the `rules` proper
    ```
 </details>
 
-## Thanks
+## Acknowledgments
 
+We want to thank the following projects for their contributions:
+
+- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
+- [eslint-plugin-fp-ts](https://github.com/buildo/eslint-plugin-fp-ts)
 - [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
 - [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node)
 - [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react)
-- [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
 
 ## License
 
