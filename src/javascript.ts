@@ -268,15 +268,15 @@ export = {
   env: {
     es2020: true,
     browser: true,
-    jest: true,
-    node: true
+    node: true,
+    jest: true
   },
 
   parser: '@babel/eslint-parser',
 
   parserOptions: {
     allowImportExportEverywhere: false,
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     requireConfigFile: false,
     sourceType: 'module',
     ecmaFeatures: {
@@ -286,7 +286,7 @@ export = {
     }
   },
 
-  plugins: ['import', 'jsdoc', 'node'],
+  plugins: ['import', 'node', 'jsdoc'],
 
   rules: JAVASCRIPT_RULES
 }

@@ -167,16 +167,31 @@ const TYPESCRIPT_RULES = {
   'no-use-before-define': STATUS.None,
   '@typescript-eslint/no-use-before-define': STATUS.None,
 
+  '@typescript-eslint/consistent-type-exports': STATUS.Warn,
+  '@typescript-eslint/consistent-type-imports': STATUS.Warn,
   '@typescript-eslint/explicit-function-return-type': [
     STATUS.Warn,
     { allowExpressions: true }
   ],
   '@typescript-eslint/explicit-member-accessibility': STATUS.Warn,
+  '@typescript-eslint/explicit-module-boundary-types': STATUS.None,
   '@typescript-eslint/member-ordering': [STATUS.Warn, { default: ORDERING }],
   '@typescript-eslint/method-signature-style': STATUS.Warn,
+  '@typescript-eslint/naming-convention': STATUS.None,
+  '@typescript-eslint/no-import-type-side-effects': STATUS.None,
   '@typescript-eslint/no-require-imports': STATUS.Warn,
   '@typescript-eslint/no-unnecessary-qualifier': STATUS.Warn,
   '@typescript-eslint/no-useless-empty-export': STATUS.Warn,
+  '@typescript-eslint/parameter-properties': STATUS.None,
+  '@typescript-eslint/prefer-enum-initializers': STATUS.None,
+  '@typescript-eslint/prefer-readonly': STATUS.None,
+  '@typescript-eslint/prefer-readonly-parameter-types': STATUS.None,
+  '@typescript-eslint/prefer-regexp-exec': STATUS.None,
+  '@typescript-eslint/promise-function-async': STATUS.None,
+  '@typescript-eslint/require-array-sort-compare': STATUS.None,
+  '@typescript-eslint/sort-type-constituents': STATUS.None,
+  '@typescript-eslint/strict-boolean-expressions': STATUS.None,
+  '@typescript-eslint/switch-exhaustiveness-check': STATUS.None,
   '@typescript-eslint/typedef': [
     STATUS.Error,
     {

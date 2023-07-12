@@ -52,8 +52,9 @@
           "@detra-lab/eslint-config/typescript"
         ],
         "parserOptions": {
-          // Change it to match your `tsconfig.json` location.
-          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
+          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
+          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
           "project": ["./tsconfig.json"]
         }
       }
@@ -72,8 +73,9 @@
           "@detra-lab/eslint-config/fp-ts"
         ],
         "parserOptions": {
-          // Change it to match your `tsconfig.json` location.
-          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
+          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
+          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
           "project": ["./tsconfig.json"]
         }
       }
@@ -103,8 +105,9 @@
           "@detra-lab/eslint-config/react"
         ],
         "parserOptions": {
-          // Change it to match your `tsconfig.json` location.
-          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
+          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
+          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
           "project": ["./tsconfig.json"]
         }
       }
@@ -124,8 +127,9 @@
           "@detra-lab/eslint-config/react"
         ],
         "parserOptions": {
-          // Change it to match your `tsconfig.json` location.
-          // In a mono-repo, it might be `./packages/*/tsconfig.json`.
+          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
+          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
+          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
           "project": ["./tsconfig.json"]
         }
       }
@@ -170,7 +174,7 @@ Extend and override specific rules by adding them to the `rules` property in the
     "@detra-lab/eslint-config/typescript"
   ],
   "parserOptions": {
-    "project": ["./tsconfig.json"]
+    "project": true
   },
   "env": [
     // Your environments (which contains several predefined global variables)
