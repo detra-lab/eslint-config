@@ -84,7 +84,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "author": {
     "name": "Detra",
     "email": "detra.lab@pm.me",
