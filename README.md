@@ -234,11 +234,11 @@ You can extend the configuration and override some rules. Add the `rules` proper
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/main.yaml?style=flat-square&colorA=6930C3&colorB=5390D9
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/tests.yaml?style=flat-square&colorA=6930C3&colorB=5390D9
 [npm_version_badge]: https://img.shields.io/npm/v/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
 [npm_downloads_badge]: https://img.shields.io/npm/dm/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
 
 <!-- Links -->
 
-[ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/main.yaml
+[ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/tests.yaml
 [npm_badge_url]: https://www.npmjs.com/package/@detra-lab/eslint-config
