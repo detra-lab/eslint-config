@@ -1,5 +1,5 @@
 ---
-@detra-lab/eslint-config': major
+'@detra-lab/eslint-config': major
 ---
 
 We want to inform you about the latest updates to our code, which bring exciting new features and improvements.
