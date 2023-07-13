@@ -1,11 +1,9 @@
-name: CI
+name: Tests
 
 on:
   pull_request:
     branches:
-      - stable
-    types:
-      - closed
+      - 'stable'
 
 jobs:
   tests:
