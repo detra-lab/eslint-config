@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- 856ea03: Fixed the `exports` field in the `package.json` file.
+
 ## 1.0.0
 
 ### Major Changes
