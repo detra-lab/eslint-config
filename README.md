@@ -152,7 +152,6 @@
    {
      "scripts": [
    +   "check:src": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore"
-
      ]
    }
    ```
