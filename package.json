@@ -7,19 +7,19 @@
   "types": "./javascript.d.ts",
   "exports": {
     ".": {
-      "import": "./javascript.js",
+      "require": "./javascript.js",
       "types": "./javascript.d.ts"
     },
     "./typescript": {
-      "import": "./typescript.js",
+      "require": "./typescript.js",
       "types": "./typescript.d.ts"
     },
     "./fp-ts": {
-      "import": "./fp-ts.js",
+      "require": "./fp-ts.js",
       "types": "./fp-ts.d.ts"
     },
     "./react": {
-      "import": "./react.js",
+      "require": "./react.js",
       "types": "./react.d.ts"
     }
   },
@@ -78,8 +78,7 @@
     }
   },
   "engines": {
-    "node": "16 || 18",
-    "pnpm": ">=8"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public"
