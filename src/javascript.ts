@@ -49,17 +49,18 @@ const JAVASCRIPT_RULES = {
   'no-dupe-keys': STATUS.Error,
   'no-duplicate-case': STATUS.Error,
   'no-duplicate-imports': STATUS.Error,
+  'no-empty': STATUS.Error,
   'no-empty-character-class': STATUS.Error,
+  'no-empty-function': STATUS.Error,
   'no-empty-pattern': STATUS.Error,
   'no-empty-static-block': STATUS.Error,
-  'no-empty': STATUS.Error,
   'no-eq-null': STATUS.Error,
   'no-eval': STATUS.Error,
   'no-ex-assign': STATUS.Error,
   'no-extend-native': STATUS.Error,
   'no-extra-bind': STATUS.Error,
   'no-extra-boolean-cast': STATUS.Error,
-  'no-extra-semi': STATUS.Error,
+  'no-extra-semi': STATUS.Warn,
   'no-fallthrough': STATUS.Error,
   'no-floating-decimal': STATUS.Error,
   'no-func-assign': STATUS.Error,
@@ -70,7 +71,7 @@ const JAVASCRIPT_RULES = {
   'no-import-assign': STATUS.Error,
   'no-inner-declarations': [STATUS.Error, 'both'],
   'no-invalid-regexp': STATUS.Error,
-  'no-invalid-this': STATUS.Error,
+  'no-invalid-this': STATUS.Warn,
   'no-irregular-whitespace': STATUS.None,
   'no-iterator': STATUS.Error,
   'no-labels': STATUS.Error,
@@ -108,7 +109,7 @@ const JAVASCRIPT_RULES = {
   'no-sequences': STATUS.Error,
   'no-setter-return': STATUS.Error,
   'no-shadow-restricted-names': STATUS.Error,
-  'no-shadow': [STATUS.Error, { hoist: 'all' }],
+  'no-shadow': [STATUS.Warn, { hoist: 'all' }],
   'no-sparse-arrays': STATUS.Error,
   'no-template-curly-in-string': STATUS.Error,
   'no-this-before-super': STATUS.Error,
@@ -126,16 +127,19 @@ const JAVASCRIPT_RULES = {
   'no-unsafe-negation': STATUS.Error,
   'no-unsafe-optional-chaining': STATUS.Error,
   'no-unused-expressions': [
-    STATUS.Error,
+    STATUS.Warn,
     { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true }
   ],
   'no-unused-labels': STATUS.Error,
   'no-unused-private-class-members': STATUS.Error,
-  'no-unused-vars': STATUS.Warn,
-  'no-use-before-define': [
+  'no-unused-vars': [
     STATUS.Error,
-    { variables: false, functions: false, classes: false }
+    {
+      argsIgnorePattern: '^_',
+      destructuredArrayIgnorePattern: '^_'
+    }
   ],
+  'no-use-before-define': STATUS.None,
   'no-useless-backreference': STATUS.Error,
   'no-useless-call': STATUS.Error,
   'no-useless-catch': STATUS.Error,
@@ -150,16 +154,17 @@ const JAVASCRIPT_RULES = {
   'no-with': STATUS.Error,
   'object-shorthand': STATUS.Error,
   'one-var': [STATUS.Error, 'never'],
-  'prefer-arrow-callback': STATUS.Error,
-  'prefer-const': STATUS.Error,
-  'prefer-destructuring': STATUS.None,
-  'prefer-object-has-own': STATUS.Error,
-  'prefer-object-spread': STATUS.Error,
-  'prefer-promise-reject-errors': STATUS.Error,
-  'prefer-regex-literals': STATUS.Error,
-  'prefer-rest-params': STATUS.Error,
-  'prefer-spread': STATUS.Error,
-  'prefer-template': STATUS.Error,
+  'prefer-arrow-callback': STATUS.Warn,
+  'prefer-const': STATUS.Warn,
+  'prefer-destructuring': STATUS.Warn,
+  'prefer-object-has-own': STATUS.Warn,
+  'prefer-object-spread': STATUS.Warn,
+  'prefer-promise-reject-errors': STATUS.Warn,
+  'prefer-regex-literals': STATUS.Warn,
+  'prefer-rest-params': STATUS.Warn,
+  'prefer-spread': STATUS.Warn,
+  'prefer-template': STATUS.Warn,
+  'require-await': STATUS.Error,
   'require-yield': STATUS.Error,
   'spaced-comment': [
     STATUS.Error,
@@ -202,6 +207,10 @@ const JAVASCRIPT_RULES = {
       }
     }
   ],
+
+  // --- Node
+  'node/global-require': STATUS.Error,
+  'node/no-unsupported-features/es-syntax': STATUS.None,
 
   // --- JSDoc
   'jsdoc/check-access': STATUS.Warn,
@@ -252,28 +261,22 @@ const JAVASCRIPT_RULES = {
   'jsdoc/require-yields-check': STATUS.Warn,
   'jsdoc/sort-tags': STATUS.None,
   'jsdoc/tag-lines': STATUS.Warn,
-  'jsdoc/valid-types': STATUS.Warn,
-
-  // --- Node
-  'node/global-require': STATUS.Error,
-  'node/no-unsupported-features/es-syntax': STATUS.None
+  'jsdoc/valid-types': STATUS.Warn
 }
 
 export = {
-  root: true,
-
   env: {
+    es2020: true,
     browser: true,
-    es2021: true,
-    jest: true,
-    node: true
+    node: true,
+    jest: true
   },
 
   parser: '@babel/eslint-parser',
 
   parserOptions: {
     allowImportExportEverywhere: false,
-    ecmaVersion: 2021,
+    ecmaVersion: 'latest',
     requireConfigFile: false,
     sourceType: 'module',
     ecmaFeatures: {
@@ -283,7 +286,7 @@ export = {
     }
   },
 
-  plugins: ['import', 'jsdoc', 'node'],
+  plugins: ['import', 'node', 'jsdoc'],
 
   rules: JAVASCRIPT_RULES
 }

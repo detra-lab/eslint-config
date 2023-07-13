@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['../javascript', '../typescript'],
   parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: ['./tsconfig.test.json']
+    project: './tsconfig.test.json',
+    tsconfigRootDir: __dirname
   }
 }

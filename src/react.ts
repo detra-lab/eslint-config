@@ -1,7 +1,7 @@
 import { STATUS } from './constants'
 
 const REACT_RULES = {
-  // --- Recommended - Overrides
+  // --- Overriding React Recommended
   'react/display-name': STATUS.None,
   'react/jsx-key': [
     STATUS.Error,
@@ -21,15 +21,17 @@ const REACT_RULES = {
   'react/jsx-fragments': [STATUS.Error, 'syntax'],
   'react/jsx-handler-names': STATUS.None,
   'react/jsx-no-constructed-context-values': STATUS.Error,
-  'react/jsx-no-leaked-render': STATUS.None,
+  'react/jsx-no-leaked-render': STATUS.Error,
   'react/jsx-no-script-url': STATUS.Error,
+  'react/jsx-no-target-blank': [
+    STATUS.Error,
+    { allowReferrer: true, warnOnSpreadAttributes: true }
+  ],
   'react/jsx-no-useless-fragment': STATUS.Error,
   'react/jsx-pascal-case': STATUS.Error,
-  'react/no-array-index-key': STATUS.None,
+  'react/no-array-index-key': STATUS.Error,
   'react/no-arrow-function-lifecycle': STATUS.Error,
   'react/no-danger': STATUS.Error,
-  'react/no-danger-with-children': STATUS.Error,
-  'react/no-did-update-set-state': STATUS.Error,
   'react/no-namespace': STATUS.Error,
   'react/no-object-type-as-default-prop': STATUS.None,
   'react/no-redundant-should-component-update': STATUS.Error,
@@ -37,7 +39,6 @@ const REACT_RULES = {
   'react/no-typos': STATUS.Error,
   'react/no-unsafe': [STATUS.Error, { checkAliases: true }],
   'react/no-unstable-nested-components': STATUS.Error,
-  'react/prefer-es6-class': [STATUS.Error, 'always'],
   'react/self-closing-comp': STATUS.Error,
   'react/sort-comp': STATUS.Error,
   'react/static-property-placement': STATUS.Error,
@@ -47,6 +48,7 @@ const REACT_RULES = {
 
 export = {
   extends: [
+    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended'

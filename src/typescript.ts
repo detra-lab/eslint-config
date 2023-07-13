@@ -1,7 +1,7 @@
 import { BANNED_TYPES, ORDERING, STATUS } from './constants'
 
 const TYPESCRIPT_RULES = {
-  // --- Overridden Basic Rules
+  // --- Overriding JavaScript Rules
   'constructor-super': STATUS.None,
   'getter-return': STATUS.None,
   'no-const-assign': STATUS.None,
@@ -22,132 +22,176 @@ const TYPESCRIPT_RULES = {
   'prefer-const': STATUS.Error,
   'prefer-rest-params': STATUS.Error,
   'prefer-spread': STATUS.Error,
-  'valid-typeof': STATUS.None,
 
+  // --- Strict Rules (Type-Checked)
   'no-array-constructor': STATUS.None,
   '@typescript-eslint/no-array-constructor': STATUS.Error,
 
-  'no-duplicate-imports': STATUS.None,
-  '@typescript-eslint/no-duplicate-imports': STATUS.Error,
-
-  'no-empty-function': STATUS.None,
-  '@typescript-eslint/no-empty-function': STATUS.Error,
-
-  'no-extra-semi': STATUS.None,
-  '@typescript-eslint/no-extra-semi': STATUS.Error,
-
-  'no-invalid-this': STATUS.None,
-  '@typescript-eslint/no-invalid-this': STATUS.Error,
+  'no-implied-eval': STATUS.None,
+  '@typescript-eslint/no-implied-eval': STATUS.Error,
 
   'no-loss-of-precision': STATUS.None,
   '@typescript-eslint/no-loss-of-precision': STATUS.Error,
 
-  'no-shadow': STATUS.None,
-  '@typescript-eslint/no-shadow': STATUS.Error,
-
-  'no-unused-expressions': STATUS.None,
-  '@typescript-eslint/no-unused-expressions': [
-    STATUS.Error,
-    { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true }
-  ],
+  'no-throw-literal': STATUS.None,
+  '@typescript-eslint/no-throw-literal': STATUS.Error,
 
   'no-unused-vars': STATUS.None,
-  '@typescript-eslint/no-unused-vars': STATUS.Warn,
-
-  'no-use-before-define': STATUS.None,
-  '@typescript-eslint/no-use-before-define': STATUS.None,
-
+  '@typescript-eslint/no-unused-vars': [
+    STATUS.Error,
+    {
+      argsIgnorePattern: '^_',
+      destructuredArrayIgnorePattern: '^_'
+    }
+  ],
   'no-useless-constructor': STATUS.None,
   '@typescript-eslint/no-useless-constructor': STATUS.Error,
 
-  // --- Recommended
-  '@typescript-eslint/adjacent-overload-signatures': STATUS.Error,
-  '@typescript-eslint/array-type': [STATUS.Error, { default: 'array-simple' }],
-  '@typescript-eslint/await-thenable': STATUS.None,
+  'require-await': STATUS.None,
+  '@typescript-eslint/require-await': STATUS.Error,
+
+  '@typescript-eslint/await-thenable': STATUS.Error,
   '@typescript-eslint/ban-ts-comment': STATUS.Error,
-  '@typescript-eslint/ban-tslint-comment': STATUS.Warn,
   '@typescript-eslint/ban-types': [STATUS.Error, { types: BANNED_TYPES }],
-  '@typescript-eslint/class-literal-property-style': [STATUS.Error, 'fields'],
-  '@typescript-eslint/consistent-generic-constructors': STATUS.None,
-  '@typescript-eslint/consistent-indexed-object-style': STATUS.None,
-  '@typescript-eslint/consistent-type-assertions': [
-    STATUS.Error,
-    { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' }
-  ],
-  '@typescript-eslint/consistent-type-definitions': [STATUS.Error, 'interface'],
-  '@typescript-eslint/explicit-function-return-type': [
-    STATUS.Error,
-    { allowExpressions: true }
-  ],
-  '@typescript-eslint/explicit-member-accessibility': STATUS.Error,
-  '@typescript-eslint/member-ordering': [STATUS.Error, { default: ORDERING }],
-  '@typescript-eslint/method-signature-style': STATUS.Error,
-  '@typescript-eslint/no-base-to-string': STATUS.None,
-  '@typescript-eslint/no-confusing-non-null-assertion': STATUS.None,
+  '@typescript-eslint/no-base-to-string': STATUS.Error,
+  '@typescript-eslint/no-confusing-void-expression': STATUS.Error,
   '@typescript-eslint/no-duplicate-enum-values': STATUS.Error,
   '@typescript-eslint/no-duplicate-type-constituents': STATUS.Error,
-  '@typescript-eslint/no-dynamic-delete': STATUS.None,
-  '@typescript-eslint/no-empty-interface': [
+  '@typescript-eslint/no-dynamic-delete': STATUS.Error,
+  '@typescript-eslint/no-explicit-any': [
     STATUS.Error,
-    { allowSingleExtends: true }
+    {
+      ignoreRestArgs: true
+    }
   ],
-  '@typescript-eslint/no-explicit-any': STATUS.Warn,
   '@typescript-eslint/no-extra-non-null-assertion': STATUS.Error,
-  '@typescript-eslint/no-extraneous-class': STATUS.None,
-  '@typescript-eslint/no-floating-promises': STATUS.None,
-  '@typescript-eslint/no-for-in-array': STATUS.None,
-  '@typescript-eslint/no-inferrable-types': [
-    STATUS.Error,
-    { ignoreParameters: true }
-  ],
+  '@typescript-eslint/no-extraneous-class': STATUS.Error,
+  '@typescript-eslint/no-floating-promises': STATUS.Error,
+  '@typescript-eslint/no-for-in-array': STATUS.Error,
   '@typescript-eslint/no-invalid-void-type': STATUS.Error,
-  '@typescript-eslint/no-meaningless-void-operator': STATUS.None,
+  '@typescript-eslint/no-meaningless-void-operator': STATUS.Error,
   '@typescript-eslint/no-misused-new': STATUS.Error,
-  '@typescript-eslint/no-misused-promises': STATUS.None,
+  '@typescript-eslint/no-misused-promises': STATUS.Error,
+  '@typescript-eslint/no-mixed-enums': STATUS.Error,
   '@typescript-eslint/no-namespace': [
     STATUS.Error,
     { allowDeclarations: true, allowDefinitionFiles: true }
   ],
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': STATUS.Error,
   '@typescript-eslint/no-non-null-asserted-optional-chain': STATUS.Error,
-  '@typescript-eslint/no-non-null-assertion': STATUS.Warn,
-  '@typescript-eslint/no-require-imports': STATUS.Error,
+  '@typescript-eslint/no-non-null-assertion': STATUS.Error,
+  '@typescript-eslint/no-redundant-type-constituents': STATUS.Error,
   '@typescript-eslint/no-this-alias': [
     STATUS.Error,
     { allowDestructuring: true }
   ],
-  '@typescript-eslint/no-unnecessary-boolean-literal-compare': STATUS.None,
-  '@typescript-eslint/no-unnecessary-condition': STATUS.None,
-  '@typescript-eslint/no-unnecessary-qualifier': STATUS.None,
-  '@typescript-eslint/no-unnecessary-type-arguments': STATUS.None,
-  '@typescript-eslint/no-unnecessary-type-assertion': STATUS.None,
+  '@typescript-eslint/no-unnecessary-boolean-literal-compare': STATUS.Error,
+  '@typescript-eslint/no-unnecessary-condition': STATUS.Error,
+  '@typescript-eslint/no-unnecessary-type-arguments': STATUS.Error,
+  '@typescript-eslint/no-unnecessary-type-assertion': STATUS.Error,
   '@typescript-eslint/no-unnecessary-type-constraint': STATUS.Error,
-  '@typescript-eslint/no-unsafe-argument': STATUS.None,
-  '@typescript-eslint/no-unsafe-assignment': STATUS.None,
-  '@typescript-eslint/no-unsafe-call': STATUS.None,
-  '@typescript-eslint/no-unsafe-declaration-merging': STATUS.None,
-  '@typescript-eslint/no-unsafe-member-access': STATUS.None,
-  '@typescript-eslint/no-unsafe-return': STATUS.None,
-  '@typescript-eslint/no-useless-empty-export': STATUS.None,
+  '@typescript-eslint/no-unsafe-argument': STATUS.Error,
+  '@typescript-eslint/no-unsafe-assignment': STATUS.Error,
+  '@typescript-eslint/no-unsafe-call': STATUS.Error,
+  '@typescript-eslint/no-unsafe-declaration-merging': STATUS.Error,
+  '@typescript-eslint/no-unsafe-enum-comparison': STATUS.Error,
+  '@typescript-eslint/no-unsafe-member-access': STATUS.Error,
+  '@typescript-eslint/no-unsafe-return': STATUS.Error,
   '@typescript-eslint/no-var-requires': STATUS.Error,
-  '@typescript-eslint/non-nullable-type-assertion-style': STATUS.None,
-  '@typescript-eslint/prefer-as-const': STATUS.Error,
-  '@typescript-eslint/prefer-for-of': STATUS.Error,
-  '@typescript-eslint/prefer-function-type': STATUS.Error,
-  '@typescript-eslint/prefer-literal-enum-member': STATUS.None,
-  '@typescript-eslint/prefer-namespace-keyword': STATUS.Error,
-  '@typescript-eslint/prefer-nullish-coalescing': STATUS.None,
-  '@typescript-eslint/prefer-optional-chain': STATUS.Error,
-  '@typescript-eslint/prefer-reduce-type-parameter': STATUS.None,
-  '@typescript-eslint/prefer-return-this-type': STATUS.None,
-  '@typescript-eslint/prefer-string-starts-ends-with': STATUS.None,
+  '@typescript-eslint/prefer-as-const': STATUS.Warn,
+  '@typescript-eslint/prefer-includes': STATUS.Warn,
+  '@typescript-eslint/prefer-literal-enum-member': STATUS.Warn,
+  '@typescript-eslint/prefer-reduce-type-parameter': STATUS.Warn,
+  '@typescript-eslint/prefer-return-this-type': STATUS.Warn,
   '@typescript-eslint/prefer-ts-expect-error': STATUS.Warn,
-  '@typescript-eslint/restrict-plus-operands': STATUS.None,
-  '@typescript-eslint/restrict-template-expressions': STATUS.None,
+  '@typescript-eslint/restrict-plus-operands': STATUS.Error,
+  '@typescript-eslint/restrict-template-expressions': STATUS.Error,
   '@typescript-eslint/triple-slash-reference': [
     STATUS.Error,
     { path: 'never', types: 'always', lib: 'always' }
   ],
+  '@typescript-eslint/unbound-method': STATUS.Error,
+  '@typescript-eslint/unified-signatures': STATUS.Error,
+
+  // --- Stylistic Rules (Type-Checked)
+  'dot-notation': STATUS.None,
+  '@typescript-eslint/dot-notation': STATUS.Error,
+
+  'no-empty-function': STATUS.None,
+  '@typescript-eslint/no-empty-function': STATUS.Error,
+
+  '@typescript-eslint/adjacent-overload-signatures': STATUS.Error,
+  '@typescript-eslint/array-type': [STATUS.Error, { default: 'array-simple' }],
+  '@typescript-eslint/ban-tslint-comment': STATUS.Error,
+  '@typescript-eslint/class-literal-property-style': [STATUS.Error, 'fields'],
+  '@typescript-eslint/consistent-generic-constructors': STATUS.Error,
+  '@typescript-eslint/consistent-indexed-object-style': STATUS.Error,
+  '@typescript-eslint/consistent-type-assertions': [
+    STATUS.Error,
+    { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' }
+  ],
+  '@typescript-eslint/consistent-type-definitions': STATUS.Error,
+  '@typescript-eslint/no-confusing-non-null-assertion': STATUS.Error,
+  '@typescript-eslint/no-empty-interface': [
+    STATUS.Error,
+    { allowSingleExtends: true }
+  ],
+  '@typescript-eslint/no-inferrable-types': [
+    STATUS.Error,
+    { ignoreParameters: true }
+  ],
+  '@typescript-eslint/non-nullable-type-assertion-style': STATUS.Error,
+  '@typescript-eslint/prefer-for-of': STATUS.Warn,
+  '@typescript-eslint/prefer-function-type': STATUS.Warn,
+  '@typescript-eslint/prefer-namespace-keyword': STATUS.Warn,
+  '@typescript-eslint/prefer-nullish-coalescing': STATUS.Warn,
+  '@typescript-eslint/prefer-optional-chain': STATUS.Warn,
+  '@typescript-eslint/prefer-string-starts-ends-with': STATUS.Warn,
+
+  // --- Misc
+  'no-extra-semi': STATUS.None,
+  '@typescript-eslint/no-extra-semi': STATUS.Warn,
+
+  'no-invalid-this': STATUS.None,
+  '@typescript-eslint/no-invalid-this': STATUS.Warn,
+
+  'no-shadow': STATUS.None,
+  '@typescript-eslint/no-shadow': STATUS.Warn,
+
+  'no-unused-expressions': STATUS.None,
+  '@typescript-eslint/no-unused-expressions': [
+    STATUS.Warn,
+    { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true }
+  ],
+
+  'no-use-before-define': STATUS.None,
+  '@typescript-eslint/no-use-before-define': STATUS.None,
+
+  '@typescript-eslint/consistent-type-exports': STATUS.Warn,
+  '@typescript-eslint/consistent-type-imports': STATUS.Warn,
+  '@typescript-eslint/explicit-function-return-type': [
+    STATUS.Warn,
+    { allowExpressions: true }
+  ],
+  '@typescript-eslint/explicit-member-accessibility': STATUS.Warn,
+  '@typescript-eslint/explicit-module-boundary-types': STATUS.None,
+  '@typescript-eslint/member-ordering': [STATUS.Warn, { default: ORDERING }],
+  '@typescript-eslint/method-signature-style': STATUS.Warn,
+  '@typescript-eslint/naming-convention': STATUS.None,
+  '@typescript-eslint/no-import-type-side-effects': STATUS.None,
+  '@typescript-eslint/no-require-imports': STATUS.Warn,
+  '@typescript-eslint/no-unnecessary-qualifier': STATUS.Warn,
+  '@typescript-eslint/no-useless-empty-export': STATUS.Warn,
+  '@typescript-eslint/parameter-properties': STATUS.None,
+  '@typescript-eslint/prefer-enum-initializers': STATUS.None,
+  '@typescript-eslint/prefer-readonly': STATUS.None,
+  '@typescript-eslint/prefer-readonly-parameter-types': STATUS.None,
+  '@typescript-eslint/prefer-regexp-exec': STATUS.None,
+  '@typescript-eslint/promise-function-async': STATUS.None,
+  '@typescript-eslint/require-array-sort-compare': STATUS.None,
+  '@typescript-eslint/sort-type-constituents': STATUS.None,
+  '@typescript-eslint/strict-boolean-expressions': STATUS.None,
+  '@typescript-eslint/switch-exhaustiveness-check': STATUS.None,
   '@typescript-eslint/typedef': [
     STATUS.Error,
     {
@@ -159,15 +203,13 @@ const TYPESCRIPT_RULES = {
       propertyDeclaration: true,
       variableDeclaration: false
     }
-  ],
-  '@typescript-eslint/unbound-method': STATUS.None,
-  '@typescript-eslint/unified-signatures': STATUS.Error
+  ]
 }
 
 export = {
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      files: ['*.ts', '*.tsx', '*.cts', '*.ctsx', '*.mts', '*.mtsx'],
 
       parser: '@typescript-eslint/parser',
 
