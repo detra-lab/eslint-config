@@ -1,5 +1,5 @@
 {
-  "extends": ["./javascript", "./typescript"],
+  "extends": ["./lib/javascript.cjs", "./lib/typescript.cjs"],
   "parserOptions": {
     "project": ["./tsconfig.json"]
   }

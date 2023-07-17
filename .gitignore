@@ -1,7 +1,4 @@
-/javascript.*
-/typescript.*
-/fp-ts.*
-/react.*
+/lib
 
 .cache
 .DS_Store
