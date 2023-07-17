@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- cff3257: The `main` and `types` fields have been removed from the `package.json`.
+
 ## 1.0.1
 
 ### Patch Changes
