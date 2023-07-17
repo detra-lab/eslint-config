@@ -42,6 +42,20 @@
    If you need to support multiple environments and syntaxes, such as TypeScript or React, we provide pre-built configurations. You can extend them as shown below:
 
     <details>
+      <summary><strong>JavaScript + React</strong></summary>
+
+      ```json
+      {
+        "root": true,
+        "extends": [
+          "@detra-lab/eslint-config",
+          "@detra-lab/eslint-config/react"
+        ]
+      }
+      ```
+    </details>
+
+    <details>
       <summary><strong>TypeScript</strong></summary>
 
       ```jsonc
@@ -78,17 +92,6 @@
           // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
           "project": ["./tsconfig.json"]
         }
-      }
-      ```
-    </details>
-
-    <details>
-      <summary><strong>JavaScript + React</strong></summary>
-
-      ```json
-      {
-        "root": true,
-        "extends": ["@detra-lab/eslint-config", "@detra-lab/eslint-config/react"]
       }
       ```
     </details>
