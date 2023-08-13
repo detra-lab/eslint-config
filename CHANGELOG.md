@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- 31db9bf: Use the `@typescript-eslint/no-redeclare` rule to ignore declaration merges between certain sets.
+
 ## 1.0.2
 
 ### Patch Changes
