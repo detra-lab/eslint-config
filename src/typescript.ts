@@ -179,6 +179,12 @@ const TYPESCRIPT_RULES = {
   '@typescript-eslint/method-signature-style': STATUS.Warn,
   '@typescript-eslint/naming-convention': STATUS.None,
   '@typescript-eslint/no-import-type-side-effects': STATUS.None,
+  '@typescript-eslint/no-redeclare': [
+    STATUS.Error,
+    {
+      ignoreDeclarationMerge: false
+    }
+  ],
   '@typescript-eslint/no-require-imports': STATUS.Warn,
   '@typescript-eslint/no-unnecessary-qualifier': STATUS.Warn,
   '@typescript-eslint/no-useless-empty-export': STATUS.Warn,
