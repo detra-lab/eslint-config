@@ -216,7 +216,7 @@ Extend and override specific rules by adding them to the `rules` property in the
 
 ## Acknowledgments
 
-We want to thank the following projects for their contributions:
+Thanks to the following projects for their contributions:
 
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
 - [eslint-plugin-fp-ts](https://github.com/buildo/eslint-plugin-fp-ts)
@@ -232,11 +232,11 @@ We want to thank the following projects for their contributions:
 
 <!-- Badges -->
 
-[ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/tests.yaml?style=flat-square&colorA=6930C3&colorB=5390D9
+[ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/test.yaml?style=flat-square&colorA=6930C3&colorB=5390D9
 [npm_version_badge]: https://img.shields.io/npm/v/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
 [npm_downloads_badge]: https://img.shields.io/npm/dm/@detra-lab/eslint-config?style=flat-square&colorA=6930C3&colorB=5390D9
 
 <!-- Links -->
 
-[ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/tests.yaml
+[ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/test.yaml
 [npm_badge_url]: https://www.npmjs.com/package/@detra-lab/eslint-config
