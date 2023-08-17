@@ -168,7 +168,10 @@ const TYPESCRIPT_RULES = {
   '@typescript-eslint/no-use-before-define': STATUS.None,
 
   '@typescript-eslint/consistent-type-exports': STATUS.Warn,
-  '@typescript-eslint/consistent-type-imports': STATUS.Warn,
+  '@typescript-eslint/consistent-type-imports': [
+    STATUS.Warn,
+    { fixStyle: 'inline-type-imports' }
+  ],
   '@typescript-eslint/explicit-function-return-type': [
     STATUS.Warn,
     { allowExpressions: true }
