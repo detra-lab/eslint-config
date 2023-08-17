@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+### Minor Changes
+
+- c6842b5: Changed the behaviour of the `@typescript-eslint/no-redeclare` rule to favour `inline-type-imports` over `separate-type-imports`.
+
 ## 1.1.0
 
 ### Minor Changes
