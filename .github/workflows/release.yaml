@@ -48,6 +48,13 @@ jobs:
           git_user_signingkey: true
           trust_level: 5
 
+      - name: 🏗️ Configure .bashrc
+        run: |
+          cat << EOF > "$HOME/.bashrc"
+            GPG_TTY=$(tty)
+            export GPG_TTY
+          EOF
+
       - name: 🏗️ Configure Git User
         run: |
           git config --global user.name ${{ steps.op-secrets.outputs.BOT_NAME }}
