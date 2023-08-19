@@ -1,6 +1,6 @@
 {
   "name": "@detra-lab/eslint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ESLint configuration for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.",
   "type": "module",
   "exports": {
