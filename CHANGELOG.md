@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Patch Changes
+
+- ad52d05: Internal changes have been made to the release pipeline.
+
 ## 1.2.0
 
 ### Minor Changes
