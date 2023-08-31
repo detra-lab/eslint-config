@@ -4,7 +4,7 @@
 [![NPM Downloads][npm_downloads_badge]][npm_badge_url]
 [![CI Status][ci_badge]][ci_badge_url]
 
-[ESLint](https://eslint.org) configurations for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.
+[ESLint](https://eslint.org) configurations for JavaScript, TypeScript, and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
   - [Why Use Our Configuration?](#why-use-our-configuration)
@@ -19,7 +19,7 @@
 ## Why Use Our Configuration?
 
 - **Up-to-date**: Our configurations are designed to incorporate the latest updates from the ESLint ecosystem.
-- **Modular**: We support a variety of syntaxes beyond modern JavaScript, including TypeScript, fp-ts, and React.
+- **Modular**: We support a variety of syntaxes beyond modern JavaScript, including TypeScript, and React.
 - **Separation of Concerns**: We focus on linting rules and do not include formatting rules, as those are better handled by Prettier.
 
 ## Installation and Usage
@@ -76,27 +76,6 @@
     </details>
 
     <details>
-      <summary><strong>TypeScript + fp-ts</strong></summary>
-
-      ```jsonc
-      {
-        "root": true,
-        "extends": [
-          "@detra-lab/eslint-config",
-          "@detra-lab/eslint-config/typescript",
-          "@detra-lab/eslint-config/fp-ts"
-        ],
-        "parserOptions": {
-          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
-          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
-          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
-          "project": ["./tsconfig.json"]
-        }
-      }
-      ```
-    </details>
-
-    <details>
       <summary><strong>TypeScript + React</strong></summary>
 
       ```jsonc
@@ -105,28 +84,6 @@
         "extends": [
           "@detra-lab/eslint-config",
           "@detra-lab/eslint-config/typescript"
-          "@detra-lab/eslint-config/react"
-        ],
-        "parserOptions": {
-          // Be sure to update the `project` value with the exact location of your `tsconfig.json` file.
-          // For mono-repos, the location may be `./packages/*/tsconfig.json`.
-          // Check https://typescript-eslint.io/packages/parser/#project for more guidance.
-          "project": ["./tsconfig.json"]
-        }
-      }
-      ```
-    </details>
-
-    <details>
-      <summary><strong>TypeScript + fp-ts + React</strong></summary>
-
-      ```jsonc
-      {
-        "root": true,
-        "extends": [
-          "@detra-lab/eslint-config",
-          "@detra-lab/eslint-config/typescript",
-          "@detra-lab/eslint-config/fp-ts"
           "@detra-lab/eslint-config/react"
         ],
         "parserOptions": {
@@ -219,7 +176,6 @@ Extend and override specific rules by adding them to the `rules` property in the
 Thanks to the following projects for their contributions:
 
 - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint)
-- [eslint-plugin-fp-ts](https://github.com/buildo/eslint-plugin-fp-ts)
 - [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
 - [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)

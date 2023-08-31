@@ -1,7 +1,7 @@
 {
   "name": "@detra-lab/eslint-config",
   "version": "1.2.1",
-  "description": "ESLint configuration for JavaScript, TypeScript, fp-ts and React. Modular and opinionated.",
+  "description": "ESLint configuration for JavaScript, TypeScript, and React. Modular and opinionated.",
   "type": "module",
   "exports": {
     ".": {
@@ -13,11 +13,6 @@
       "import": "./lib/typescript.js",
       "require": "./lib/typescript.cjs",
       "types": "./lib/typescript.d.ts"
-    },
-    "./fp-ts": {
-      "import": "./lib/fp-ts.js",
-      "require": "./lib/fp-ts.cjs",
-      "types": "./lib/fp-ts.d.ts"
     },
     "./react": {
       "import": "./lib/react.js",
@@ -43,21 +38,20 @@
     "@changesets/cli": "^2.26.2",
     "@detra-lab/prettier-config": "^0.2.0",
     "@detra-lab/tsc": "^0.2.5",
-    "@evilmartians/lefthook": "^1.4.8",
+    "@evilmartians/lefthook": "^1.4.9",
     "@types/node": "^16.18.40",
-    "eslint": "^8.47.0",
-    "prettier": "^3.0.1",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@babel/core": "7.22.11",
     "@babel/eslint-parser": "7.22.11",
-    "@typescript-eslint/eslint-plugin": "6.4.0",
-    "@typescript-eslint/parser": "6.4.0",
-    "eslint-plugin-fp-ts": "0.3.2",
+    "@typescript-eslint/eslint-plugin": "6.5.0",
+    "@typescript-eslint/parser": "6.5.0",
     "eslint-plugin-import": "2.28.1",
-    "eslint-plugin-jsdoc": "46.5.0",
+    "eslint-plugin-jsdoc": "46.5.1",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-react": "7.33.2",
@@ -65,13 +59,9 @@
   },
   "peerDependencies": {
     "eslint": ">=8.0",
-    "fp-ts": ">=2.0",
     "typescript": ">=5.0"
   },
   "peerDependenciesMeta": {
-    "fp-ts": {
-      "optional": true
-    },
     "typescript": {
       "optional": true
     }
