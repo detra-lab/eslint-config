@@ -2,14 +2,17 @@
 '@detra-lab/eslint-config': major
 ---
 
-This release introduces a significant breaking change as we have deprecated the `fp-ts` specific configuration.
+This release introduces a significant breaking change as we have deprecated the [`fp-ts`](https://gcanti.github.io/fp-ts/) specific configuration.
 We've made this decision to provide a more general and maintainable ESLint configuration for a wider range of projects.
 
 **Migration steps:**
 
 - If your project relied on the deprecated `fp-ts` configuration, you'll need to update your ESLint configuration files to remove any references to it.
 - For those who have used the `fp-ts` configuration and wish to replicate its behaviour, we recommend the following steps:
-  1. Install the `eslint-plugin-fp-ts`: `npm install eslint-plugin-fp-ts --save-dev`
+  1. Install the [`eslint-plugin-fp-ts`](https://github.com/buildo/eslint-plugin-fp-ts):
+  ```sh
+  npm install eslint-plugin-fp-ts --save-dev
+  ```
   2. Modify your ESLint file (e.g. `.eslintrc.json`) to add the necessary rules from `eslint-plugin-fp-ts`. Here's a sample configuration that mirrors the behaviour of the deprecated configuration:
   ```json
   {
