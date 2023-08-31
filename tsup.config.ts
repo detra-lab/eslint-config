@@ -3,7 +3,6 @@ import { defineConfig } from 'tsup'
 const ENTRIES = {
   javascript: './src/javascript.ts',
   typescript: './src/typescript.ts',
-  'fp-ts': './src/fp-ts.ts',
   react: './src/react.ts'
 }
 
