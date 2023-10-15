@@ -4,13 +4,14 @@
 [![NPM Downloads][npm_downloads_badge]][npm_badge_url]
 [![CI Status][ci_badge]][ci_badge_url]
 
-[ESLint](https://eslint.org) configurations for JavaScript, TypeScript, and React. Modular and opinionated.
+[ESLint](https://eslint.org/) configurations for JavaScript, TypeScript, and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
   - [Why Use Our Configuration?](#why-use-our-configuration)
   - [Installation and Usage](#installation-and-usage)
   - [Extending the Configuration](#extending-the-configuration)
   - [Integration with IDEs/Editors](#integration-with-ideseditors)
+  - [Contributing](#contributing)
   - [Acknowledgments](#acknowledgments)
   - [License](#license)
 
@@ -43,7 +44,6 @@
 
     <details>
       <summary><strong>JavaScript + React</strong></summary>
-
       ```json
       {
         "root": true,
@@ -57,7 +57,6 @@
 
     <details>
       <summary><strong>TypeScript</strong></summary>
-
       ```jsonc
       {
         "root": true,
@@ -77,7 +76,6 @@
 
     <details>
       <summary><strong>TypeScript + React</strong></summary>
-
       ```jsonc
       {
         "root": true,
@@ -159,7 +157,6 @@ Extend and override specific rules by adding them to the `rules` property in the
 
 <details>
 <summary><strong>Visual Studio Code</strong></summary>
-
 1. Install the [ESLint Plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 2. Add the following code to your `.vscode/settings.json` file:
@@ -170,6 +167,10 @@ Extend and override specific rules by adding them to the `rules` property in the
    "eslint.validate": ["javascript"] // Add the types of files you want to validate (e.g. "typescript", "javascriptreact", "typescriptreact"])
    ```
 </details>
+
+## Contributing
+
+Read our [contributing guide](https://github.com/detra-lab/eslint-config/blob/stable/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
 
 ## Acknowledgments
 
@@ -184,15 +185,15 @@ Thanks to the following projects for their contributions:
 
 ## License
 
-[Apache License 2.0](./LICENSE)
+[Apache License 2.0](https://github.com/detra-lab/eslint-config/blob/stable/LICENSE)
+
+<div align="center"><img src="https://raw.github.com/detra-lab/.github/stable/profile/logo.svg" width="100" height="100" alt="Detra" /><p><small>© 2023 Detra</small></p></div>
 
 <!-- Badges -->
-
 [ci_badge]: https://img.shields.io/github/actions/workflow/status/detra-lab/eslint-config/test.yaml?style=flat-square&colorA=424394&colorB=80ffdb
 [npm_version_badge]: https://img.shields.io/npm/v/@detra-lab/eslint-config?style=flat-square&colorA=424394&colorB=80ffdb
 [npm_downloads_badge]: https://img.shields.io/npm/dm/@detra-lab/eslint-config?style=flat-square&colorA=424394&colorB=80ffdb
 
 <!-- Links -->
-
 [ci_badge_url]: https://github.com/detra-lab/eslint-config/actions/workflows/test.yaml
 [npm_badge_url]: https://www.npmjs.com/package/@detra-lab/eslint-config
