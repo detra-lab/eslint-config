@@ -11,6 +11,7 @@
   - [Installation and Usage](#installation-and-usage)
   - [Extending the Configuration](#extending-the-configuration)
   - [Integration with IDEs/Editors](#integration-with-ideseditors)
+  - [Code of Conduct](#code-of-conduct)
   - [Contributing](#contributing)
   - [Acknowledgments](#acknowledgments)
   - [License](#license)
@@ -167,6 +168,10 @@ Extend and override specific rules by adding them to the `rules` property in the
    "eslint.validate": ["javascript"] // Add the types of files you want to validate (e.g. "typescript", "javascriptreact", "typescriptreact"])
    ```
 </details>
+
+## Code of Conduct
+
+Help us keep the project open and inclusive. Please read and follow our [Code of Conduct](https://github.com/detra-lab/eslint-config/blob/stable/CODE_OF_CONDUCT.md).
 
 ## Contributing
 
