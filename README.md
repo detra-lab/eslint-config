@@ -7,10 +7,10 @@
 [ESLint](https://eslint.org/) configurations for JavaScript, TypeScript, and React. Modular and opinionated.
 
 - [ESLint Config](#eslint-config)
-  - [Why Use Our Configuration?](#why-use-our-configuration)
-  - [Installation and Usage](#installation-and-usage)
-  - [Extending the Configuration](#extending-the-configuration)
-  - [Integration with IDEs/Editors](#integration-with-ideseditors)
+  - [Why use our configuration?](#why-use-our-configuration)
+  - [Installation and usage](#installation-and-usage)
+  - [Extending the configuration](#extending-the-configuration)
+  - [Integration with IDEs/editors](#integration-with-ideseditors)
   - [Code of Conduct](#code-of-conduct)
   - [Contributing](#contributing)
   - [Acknowledgments](#acknowledgments)
@@ -18,13 +18,13 @@
 
 > Please note that this ESLint configuration does not include code formatting rules, as those are handled by [Prettier](https://prettier.io/). To handle code formatting, you can use [`@detra-lab/prettier`](https://github.com/detra-lab/prettier-config).
 
-## Why Use Our Configuration?
+## Why use our configuration?
 
 - **Up-to-date**: Our configurations are designed to incorporate the latest updates from the ESLint ecosystem.
 - **Modular**: We support a variety of syntaxes beyond modern JavaScript, including TypeScript, and React.
 - **Separation of Concerns**: We focus on linting rules and do not include formatting rules, as those are better handled by Prettier.
 
-## Installation and Usage
+## Installation and usage
 
 1. Install the required dependencies:
 
@@ -121,7 +121,7 @@
    pnpm run check:src
    ```
 
-## Extending the Configuration
+## Extending the configuration
 
 Extend and override specific rules by adding them to the `rules` property in the `.eslintrc.json` file.
 
@@ -154,7 +154,7 @@ Extend and override specific rules by adding them to the `rules` property in the
 }
 ```
 
-## Integration with IDEs/Editors
+## Integration with IDEs/editors
 
 <details>
 <summary><strong>Visual Studio Code</strong></summary>
