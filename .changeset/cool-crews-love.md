@@ -2,4 +2,4 @@
 '@detra-lab/eslint-config': patch
 ---
 
-Added changeset script in `package.json`
+Added changeset script in `package.json`.
