@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.1
+
+### Patch Changes
+
+- 141223f: Added changeset script in `package.json`.
+
 ## 2.0.0
 
 ### Major Changes
