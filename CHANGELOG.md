@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- 74df60b: Added new rule `@typescript-eslint/no-useless-template-literals`.
+
 ## 2.0.1
 
 ### Patch Changes
