@@ -97,6 +97,7 @@ const TYPESCRIPT_RULES = {
   '@typescript-eslint/no-unsafe-enum-comparison': STATUS.Error,
   '@typescript-eslint/no-unsafe-member-access': STATUS.Error,
   '@typescript-eslint/no-unsafe-return': STATUS.Error,
+  '@typescript-eslint/no-useless-template-literals': STATUS.Error,
   '@typescript-eslint/no-var-requires': STATUS.Error,
   '@typescript-eslint/prefer-as-const': STATUS.Warn,
   '@typescript-eslint/prefer-includes': STATUS.Warn,
