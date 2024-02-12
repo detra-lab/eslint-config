@@ -34,7 +34,7 @@
 
 2. Create a `.eslintrc.json` file in the root of your project and extend it with our configuration:
 
-   ```jsonc
+   ```json
    {
      "root": true,
      "extends": "@detra-lab/eslint-config"
@@ -45,7 +45,8 @@
 
     <details>
       <summary><strong>JavaScript + React</strong></summary>
-      ```json
+
+      ```jsonc
       {
         "root": true,
         "extends": [
@@ -58,6 +59,7 @@
 
     <details>
       <summary><strong>TypeScript</strong></summary>
+
       ```jsonc
       {
         "root": true,
@@ -77,6 +79,7 @@
 
     <details>
       <summary><strong>TypeScript + React</strong></summary>
+
       ```jsonc
       {
         "root": true,

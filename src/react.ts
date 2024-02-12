@@ -48,7 +48,6 @@ const REACT_RULES = {
 
 export = {
   extends: [
-    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended'
