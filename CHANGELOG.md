@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0
+
+### Minor Changes
+
+- 1d05950: Remove the `react/jsx-runtime` plugin and all related rules such as `jsx-uses-react` and `react-in-jsx`.
+
 ## 2.1.0
 
 ### Minor Changes
