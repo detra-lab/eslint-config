@@ -9,12 +9,12 @@
 
 ### Added ESLint Rules
 
-- Added `@typescript-eslint/no-array-delete` rule [(more details)](https://typescript-eslint.io/rules/no-array-delete).
-- Added `@typescript-eslint/prefer-promise-reject-errors` rule [(more details)](https://typescript-eslint.io/rules/prefer-promise-reject-errors).
+- [TypeScript Config] Added `@typescript-eslint/no-array-delete` rule [(more details)](https://typescript-eslint.io/rules/no-array-delete).
+- [TypeScript Config] Added `@typescript-eslint/prefer-promise-reject-errors` rule [(more details)](https://typescript-eslint.io/rules/prefer-promise-reject-errors).
 
 ### Removed ESLint Rules
 
-- Removed the deprecated `no-new-object` rule. It has been replaced by the `no-object-constructor` rule [(more details)](https://eslint.org/docs/latest/rules/no-object-constructor).
+- [JavaScript Config] Removed the deprecated `no-new-object` rule. It has been replaced by the `no-object-constructor` rule [(more details)](https://eslint.org/docs/latest/rules/no-object-constructor).
 
 ### Updated Dependencies
 
