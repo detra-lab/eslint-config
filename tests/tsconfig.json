@@ -1,5 +1,5 @@
 {
-  "extends": "@detra-lab/tsc/node/tsconfig.cjs.json",
+  "extends": "@detra-lab/tsc/node/cjs",
   "compilerOptions": {
     "noEmit": true
   },
