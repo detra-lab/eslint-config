@@ -44,8 +44,12 @@ const TYPESCRIPT_RULES = {
       destructuredArrayIgnorePattern: '^_'
     }
   ],
+
   'no-useless-constructor': STATUS.None,
   '@typescript-eslint/no-useless-constructor': STATUS.Error,
+  
+  'prefer-promise-reject-errors': STATUS.None,
+  '@typescript-eslint/prefer-promise-reject-errors': STATUS.Warn,
 
   'require-await': STATUS.None,
   '@typescript-eslint/require-await': STATUS.Error,
@@ -53,6 +57,7 @@ const TYPESCRIPT_RULES = {
   '@typescript-eslint/await-thenable': STATUS.Error,
   '@typescript-eslint/ban-ts-comment': STATUS.Error,
   '@typescript-eslint/ban-types': [STATUS.Error, { types: BANNED_TYPES }],
+  '@typescript-eslint/no-array-delete': STATUS.Error,
   '@typescript-eslint/no-base-to-string': STATUS.Error,
   '@typescript-eslint/no-confusing-void-expression': STATUS.Error,
   '@typescript-eslint/no-duplicate-enum-values': STATUS.Error,

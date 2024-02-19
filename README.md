@@ -166,7 +166,7 @@ Extend and override specific rules by adding them to the `rules` property in the
 2. Add the following code to your `.vscode/settings.json` file:
    ```jsonc
    "editor.codeActionsOnSave": {
-     "source.fixAll.eslint": true
+     "source.fixAll.eslint": "explicit"
    },
    "eslint.validate": ["javascript"] // Add the types of files you want to validate (e.g. "typescript", "javascriptreact", "typescriptreact"])
    ```
