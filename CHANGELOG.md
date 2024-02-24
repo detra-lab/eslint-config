@@ -4,7 +4,9 @@
 
 ### Minor Changes
 
-- 402b269: ### Updated ESLint Rules
+- 402b269:
+
+  ### Updated ESLint Rules
 
   - [JavaScript Config] The `curly` was updated as a Warn instead of an Error. Additionally, the `multi` and `consistent` options were passed [(more details)](https://eslint.org/docs/latest/rules/curly#consistent).
 
