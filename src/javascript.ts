@@ -177,7 +177,7 @@ const JAVASCRIPT_RULES = {
   'vars-on-top': STATUS.Error,
   camelcase: [STATUS.Error, { properties: 'never' }],
   complexity: [STATUS.Error, { max: 20 }],
-  curly: STATUS.Error,
+  curly: [STATUS.Warn, 'multi', 'consistent'],
   eqeqeq: [STATUS.Error, 'always'],
   radix: STATUS.Error,
   strict: [STATUS.Error, 'never'],
