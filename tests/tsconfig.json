@@ -1,7 +1,0 @@
-{
-  "extends": "@detra-lab/tsc/node/cjs",
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": ["./*.ts"]
-}

@@ -39,6 +39,7 @@ const REACT_RULES = {
   'react/no-typos': STATUS.Error,
   'react/no-unsafe': [STATUS.Error, { checkAliases: true }],
   'react/no-unstable-nested-components': STATUS.Error,
+  'react/prop-types': STATUS.None,
   'react/self-closing-comp': STATUS.Error,
   'react/sort-comp': STATUS.Error,
   'react/static-property-placement': STATUS.Error,
@@ -49,6 +50,7 @@ const REACT_RULES = {
 export = {
   extends: [
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended'
   ],

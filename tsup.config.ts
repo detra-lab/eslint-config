@@ -8,7 +8,7 @@ const ENTRIES = {
 
 const OUT_DIR = './lib'
 
-const config: Config = {
+const config: ReturnType<typeof defineConfig> = {
   dts: true,
   clean: false,
   outDir: OUT_DIR,
@@ -20,8 +20,4 @@ const config: Config = {
   splitting: false
 }
 
-// eslint-disable-next-line no-restricted-exports
 export default defineConfig(config)
-
-// --- Types
-type Config = ReturnType<typeof defineConfig>
