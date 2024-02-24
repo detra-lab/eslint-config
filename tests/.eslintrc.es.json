@@ -1,4 +1,3 @@
 {
-  "root": true,
   "extends": ["../lib/javascript.cjs"]
 }
